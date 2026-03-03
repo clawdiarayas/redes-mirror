@@ -18,16 +18,14 @@
             <span class="text-3xl">📊</span>
             <div>
                 <h1 class="text-2xl font-bold text-white">Reporte de Redes SCORG</h1>
-                <p class="text-slate-400 text-sm">Mirror Tab • Corte: 03/03/2026 17:14 CST</p>
+                <p class="text-slate-400 text-sm">Mirror Tab • Corte: 03/03/2026 17:23 CST</p>
             </div>
         </div>
-
-        <!-- Meta Global -->
         <div class="card bg-slate-900/50 border border-slate-700 mb-6 p-6 rounded-xl">
             <div class="flex justify-between items-end mb-2">
                 <div>
                     <h3 class="text-sm font-bold text-slate-400 uppercase tracking-wider">Meta Global (Amigos)</h3>
-                    <div class="text-4xl font-black text-white mt-1">15,073 <span class="text-lg text-slate-500 font-normal">/ 35,000</span></div>
+                    <div class="text-4xl font-black text-white mt-1">15,078 <span class="text-lg text-slate-500 font-normal">/ 35,000</span></div>
                 </div>
                 <div class="text-right">
                     <div class="text-3xl font-bold text-emerald-400">43.1%</div>
@@ -35,120 +33,72 @@
                 </div>
             </div>
             <div class="w-full bg-slate-800 rounded-full h-4 overflow-hidden mb-2">
-                <div class="bg-orange-500 h-4 rounded-full transition-all duration-1000" style="width: 43.1%"></div>
+                <div class="bg-orange-500 h-4 rounded-full transition-all duration-1000" style="width: 43.08%"></div>
             </div>
             <div class="flex justify-between text-xs text-slate-500 font-mono">
-                <span>Faltan: 19,927</span>
+                <span>Faltan: 19,922</span>
                 <span>Meta: 35,000</span>
             </div>
         </div>
-
-        <!-- KPIs -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-            <div class="card border-l-4 border-blue-500">
-                <div class="text-slate-400 text-xs uppercase font-bold">Responsables</div>
-                <div class="text-2xl font-bold text-white mt-1">114</div>
-            </div>
-            <div class="card border-l-4 border-purple-500">
-                <div class="text-slate-400 text-xs uppercase font-bold">Cabezas de Red</div>
-                <div class="text-2xl font-bold text-white mt-1">1,597</div>
-            </div>
-            <div class="card border-l-4 border-emerald-500">
-                <div class="text-slate-400 text-xs uppercase font-bold">Amigos</div>
-                <div class="text-2xl font-bold text-white mt-1">15,073</div>
-            </div>
+            <div class="card border-l-4 border-blue-500"><div class="text-slate-400 text-xs uppercase font-bold">Responsables</div><div class="text-2xl font-bold text-white mt-1">114</div></div>
+            <div class="card border-l-4 border-purple-500"><div class="text-slate-400 text-xs uppercase font-bold">Cabezas de Red</div><div class="text-2xl font-bold text-white mt-1">1,598</div></div>
+            <div class="card border-l-4 border-emerald-500"><div class="text-slate-400 text-xs uppercase font-bold">Amigos</div><div class="text-2xl font-bold text-white mt-1">15,078</div></div>
         </div>
-
-        <!-- Gráfica de Crecimiento -->
         <div class="card mb-6">
             <h3 class="text-lg font-bold text-white mb-4">Crecimiento de Amigos</h3>
-            <div class="h-64">
-                <canvas id="redesChart"></canvas>
-            </div>
+            <div class="h-64"><canvas id="redesChart"></canvas></div>
         </div>
-
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <!-- Tabla Regiones -->
             <div class="card overflow-hidden">
                 <h3 class="text-lg font-bold text-white mb-4">Desglose por Región</h3>
                 <div class="overflow-x-auto">
                     <table class="w-full text-sm text-left">
-                        <thead class="text-xs text-slate-400 uppercase bg-slate-900/50">
-                            <tr>
-                                <th class="py-3 px-4">Región</th>
-                                <th class="py-3 px-4 text-right">Resp.</th>
-                                <th class="py-3 px-4 text-right">Cabezas</th>
-                                <th class="py-3 px-4 text-right">Amigos</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="border-b border-slate-700 hover:bg-slate-800/50"><td class="py-3 px-4">TORREÓN Y SAN PEDRO</td><td class="py-3 px-4 text-right">40</td><td class="py-3 px-4 text-right">545</td><td class="py-3 px-4 text-right text-emerald-400 font-bold">7,549</td></tr>
-                            <tr class="border-b border-slate-700 hover:bg-slate-800/50"><td class="py-3 px-4">SALTILLO</td><td class="py-3 px-4 text-right">33</td><td class="py-3 px-4 text-right">522</td><td class="py-3 px-4 text-right text-emerald-400 font-bold">3,563</td></tr>
-                            <tr class="border-b border-slate-700 hover:bg-slate-800/50"><td class="py-3 px-4">CARBONÍFERA</td><td class="py-3 px-4 text-right">6</td><td class="py-3 px-4 text-right">80</td><td class="py-3 px-4 text-right text-emerald-400 font-bold">1,284</td></tr>
-                            <tr class="border-b border-slate-700 hover:bg-slate-800/50"><td class="py-3 px-4">PIEDRAS NEGRAS</td><td class="py-3 px-4 text-right">8</td><td class="py-3 px-4 text-right">173</td><td class="py-3 px-4 text-right text-emerald-400 font-bold">1,205</td></tr>
-                            <tr class="border-b border-slate-700 hover:bg-slate-800/50"><td class="py-3 px-4">ACUÑA</td><td class="py-3 px-4 text-right">6</td><td class="py-3 px-4 text-right">120</td><td class="py-3 px-4 text-right text-emerald-400 font-bold">1,007</td></tr>
-                            <tr class="border-b border-slate-700 hover:bg-slate-800/50"><td class="py-3 px-4">MONCLOVA</td><td class="py-3 px-4 text-right">18</td><td class="py-3 px-4 text-right">151</td><td class="py-3 px-4 text-right text-emerald-400 font-bold">453</td></tr>
-                            <tr class="border-b border-slate-700 hover:bg-slate-800/50"><td class="py-3 px-4">PARRAS</td><td class="py-3 px-4 text-right">3</td><td class="py-3 px-4 text-right">6</td><td class="py-3 px-4 text-right text-emerald-400 font-bold">12</td></tr>
-                        </tbody>
+                        <thead class="text-xs text-slate-400 uppercase bg-slate-900/50"><tr><th class="py-3 px-4">Región</th><th class="py-3 px-4 text-right">Resp.</th><th class="py-3 px-4 text-right">Cabezas</th><th class="py-3 px-4 text-right">Amigos</th></tr></thead>
+                        <tbody><tr class="border-b border-slate-700 hover:bg-slate-800/50"><td class="py-3 px-4">TORREÓN Y SAN PEDRO</td><td class="py-3 px-4 text-right">40</td><td class="py-3 px-4 text-right">546</td><td class="py-3 px-4 text-right text-emerald-400 font-bold">7,554</td></tr><tr class="border-b border-slate-700 hover:bg-slate-800/50"><td class="py-3 px-4">SALTILLO</td><td class="py-3 px-4 text-right">33</td><td class="py-3 px-4 text-right">522</td><td class="py-3 px-4 text-right text-emerald-400 font-bold">3,563</td></tr><tr class="border-b border-slate-700 hover:bg-slate-800/50"><td class="py-3 px-4">CARBONÍFERA</td><td class="py-3 px-4 text-right">6</td><td class="py-3 px-4 text-right">80</td><td class="py-3 px-4 text-right text-emerald-400 font-bold">1,284</td></tr><tr class="border-b border-slate-700 hover:bg-slate-800/50"><td class="py-3 px-4">PIEDRAS NEGRAS</td><td class="py-3 px-4 text-right">8</td><td class="py-3 px-4 text-right">173</td><td class="py-3 px-4 text-right text-emerald-400 font-bold">1,205</td></tr><tr class="border-b border-slate-700 hover:bg-slate-800/50"><td class="py-3 px-4">ACUÑA</td><td class="py-3 px-4 text-right">6</td><td class="py-3 px-4 text-right">120</td><td class="py-3 px-4 text-right text-emerald-400 font-bold">1,007</td></tr><tr class="border-b border-slate-700 hover:bg-slate-800/50"><td class="py-3 px-4">MONCLOVA</td><td class="py-3 px-4 text-right">18</td><td class="py-3 px-4 text-right">151</td><td class="py-3 px-4 text-right text-emerald-400 font-bold">453</td></tr><tr class="border-b border-slate-700 hover:bg-slate-800/50"><td class="py-3 px-4">PARRAS</td><td class="py-3 px-4 text-right">3</td><td class="py-3 px-4 text-right">6</td><td class="py-3 px-4 text-right text-emerald-400 font-bold">12</td></tr></tbody>
                     </table>
                 </div>
             </div>
-
-            <!-- Tabla Distritos -->
             <div class="card overflow-hidden">
                 <h3 class="text-lg font-bold text-white mb-4">Top Distritos</h3>
                 <div class="overflow-x-auto">
                     <table class="w-full text-sm text-left">
-                        <thead class="text-xs text-slate-400 uppercase bg-slate-900/50">
-                            <tr>
-                                <th class="py-3 px-4">Distrito</th>
-                                <th class="py-3 px-4 text-right">Amigos</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="border-b border-slate-700"><td class="py-3 px-4">Distrito 9 (Torreón)</td><td class="py-3 px-4 text-right text-emerald-400 font-bold">1,963</td></tr>
-                            <tr class="border-b border-slate-700"><td class="py-3 px-4">Distrito 10 (Torreón)</td><td class="py-3 px-4 text-right text-emerald-400 font-bold">1,774</td></tr>
-                            <tr class="border-b border-slate-700"><td class="py-3 px-4">Distrito 11 (Torreón)</td><td class="py-3 px-4 text-right text-emerald-400 font-bold">1,334</td></tr>
-                            <tr class="border-b border-slate-700"><td class="py-3 px-4">Distrito 8 (Torreón)</td><td class="py-3 px-4 text-right text-emerald-400 font-bold">1,323</td></tr>
-                            <tr class="border-b border-slate-700"><td class="py-3 px-4">Distrito 3 (Sabinas)</td><td class="py-3 px-4 text-right text-emerald-400 font-bold">1,278</td></tr>
-                        </tbody>
+                        <thead class="text-xs text-slate-400 uppercase bg-slate-900/50"><tr><th class="py-3 px-4">Distrito</th><th class="py-3 px-4 text-right">Amigos</th></tr></thead>
+                        <tbody><tr class="border-b border-slate-700"><td class="py-3 px-4">Distrito 9 (Torreón)</td><td class="py-3 px-4 text-right text-emerald-400 font-bold">1,966</td></tr><tr class="border-b border-slate-700"><td class="py-3 px-4">Distrito 10 (Torreón)</td><td class="py-3 px-4 text-right text-emerald-400 font-bold">1,774</td></tr><tr class="border-b border-slate-700"><td class="py-3 px-4">Distrito 11 (Torreón)</td><td class="py-3 px-4 text-right text-emerald-400 font-bold">1,335</td></tr><tr class="border-b border-slate-700"><td class="py-3 px-4">Distrito 8 (Torreón)</td><td class="py-3 px-4 text-right text-emerald-400 font-bold">1,323</td></tr><tr class="border-b border-slate-700"><td class="py-3 px-4">Distrito 3 (Sabinas)</td><td class="py-3 px-4 text-right text-emerald-400 font-bold">1,278</td></tr></tbody>
                     </table>
                 </div>
             </div>
         </div>
     </div>
-
     <script>
         lucide.createIcons();
-        fetch('data/redes_growth.json')
-            .then(res => res.json())
-            .then(data => {
-                const ctx = document.getElementById('redesChart').getContext('2d');
-                new Chart(ctx, {
-                    type: 'line',
-                    data: {
-                        labels: data.labels,
-                        datasets: [{
-                            label: 'Amigos',
-                            data: data.amigos,
-                            borderColor: '#3b82f6',
-                            backgroundColor: 'rgba(59, 130, 246, 0.1)',
-                            tension: 0.3,
-                            fill: true,
-                            pointBackgroundColor: '#3b82f6'
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: false,
-                        plugins: { legend: { display: false } },
-                        scales: {
-                            y: { grid: { color: '#334155' }, ticks: { color: '#94a3b8' } },
-                            x: { grid: { display: false }, ticks: { color: '#94a3b8' } }
-                        }
+        fetch('data/redes_growth.json').then(res => res.json()).then(data => {
+            const ctx = document.getElementById('redesChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: data.labels,
+                    datasets: [{
+                        label: 'Amigos',
+                        data: data.amigos,
+                        borderColor: '#3b82f6',
+                        backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                        tension: 0.3,
+                        fill: true,
+                        pointBackgroundColor: '#3b82f6'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        y: { grid: { color: '#334155' }, ticks: { color: '#94a3b8' } },
+                        x: { grid: { display: false }, ticks: { color: '#94a3b8' } }
                     }
-                });
+                }
             });
+        });
     </script>
 </body>
 </html>
