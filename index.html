@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de Redes SCORG</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+        .card { border-radius: 12px; border: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        .header { background: #2c3e50; color: white; padding: 2rem 0; margin-bottom: 2rem; border-radius: 0 0 24px 24px; }
+        .stat-card { text-align: center; padding: 1.5rem; }
+        .stat-value { font-size: 2.5rem; font-weight: bold; color: #2c3e50; }
+        .stat-label { color: #7f8c8d; text-transform: uppercase; letter-spacing: 1px; font-size: 0.8rem; }
+        .progress { height: 25px; border-radius: 12px; background-color: #e9ecef; }
+        .progress-bar { background: linear-gradient(90deg, #3498db, #2ecc71); font-weight: bold; }
+        table { background: white; border-radius: 12px; overflow: hidden; }
+        .table thead { background: #f1f3f5; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="container text-center">
+        <h1>📊 Reporte de Redes SCORG</h1>
+        <p class="lead mb-0">Estado de Avance al Corte: <span id="current-date"></span></p>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Avance Global -->
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title mb-4">Avance Global (Meta: 35,000 Amigos)</h5>
+            <div class="progress mb-2">
+                <div id="main-progress-bar" class="progress-bar" role="progressbar" style="width: 41.6%;" aria-valuenow="41.6" aria-valuemin="0" aria-valuemax="100">41.6%</div>
+            </div>
+            <p class="text-center text-muted"><strong id="total-amigos">14,562</strong> amigos registrados de 35,000</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Resumen por Región -->
+        <div class="col-md-7">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title mb-3">Resumen por Región</h5>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Región</th>
+                                    <th class="text-center">Resp.</th>
+                                    <th class="text-center">Cabezas</th>
+                                    <th class="text-center">Amigos</th>
+                                </tr>
+                            </thead>
+                            <tbody id="region-table">
+                                <!-- Datos inyectados por JS o manual -->
+                                <tr><td>Torreón y San Pedro</td><td class="text-center">39</td><td class="text-center">533</td><td class="text-center">7,155</td></tr>
+                                <tr><td>Saltillo</td><td class="text-center">33</td><td class="text-center">521</td><td class="text-center">3,528</td></tr>
+                                <tr><td>Carbonífera</td><td class="text-center">6</td><td class="text-center">80</td><td class="text-center">1,275</td></tr>
+                                <tr><td>Piedras Negras</td><td class="text-center">8</td><td class="text-center">172</td><td class="text-center">1,151</td></tr>
+                                <tr><td>Acuña</td><td class="text-center">6</td><td class="text-center">120</td><td class="text-center">993</td></tr>
+                                <tr><td>Monclova</td><td class="text-center">18</td><td class="text-center">151</td><td class="text-center">449</td></tr>
+                                <tr><td>Parras</td><td class="text-center">3</td><td class="text-center">6</td><td class="text-center">11</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Top Distritos -->
+        <div class="col-md-5">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title mb-3">Top 5 Distritos</h5>
+                    <div class="list-group list-group-flush" id="distritos-list">
+                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                            <div><strong>D9</strong> <small class="text-muted">(Torreón)</small></div>
+                            <span class="badge bg-primary rounded-pill">1,876</span>
+                        </div>
+                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                            <div><strong>D10</strong> <small class="text-muted">(Torreón)</small></div>
+                            <span class="badge bg-primary rounded-pill">1,702</span>
+                        </div>
+                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                            <div><strong>D3</strong> <small class="text-muted">(Sabinas)</small></div>
+                            <span class="badge bg-primary rounded-pill">1,275</span>
+                        </div>
+                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                            <div><strong>D8</strong> <small class="text-muted">(Torreón)</small></div>
+                            <span class="badge bg-primary rounded-pill">1,274</span>
+                        </div>
+                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                            <div><strong>D11</strong> <small class="text-muted">(Torreón)</small></div>
+                            <span class="badge bg-primary rounded-pill">1,268</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('current-date').textContent = new Date().toLocaleString('es-MX', { timeZone: 'America/Monterrey' });
+</script>
+
+</body>
+</html>
